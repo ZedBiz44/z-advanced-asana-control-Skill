@@ -6,7 +6,7 @@ This repository contains the ZedBiz skill for advanced Asana administration. It 
 
 Use this skill when an approved ZedBiz agent must inspect or change advanced Asana structures, create a controlled project-level change, manage dependencies or reporting, or prepare and execute a confirmed bulk or cross-project update.
 
-The authoritative runtime instructions are in [`SKILL.md`](SKILL.md). GitHub is the technical source of truth; the linked Notion SOP is the operational guide.
+The authoritative runtime instructions are in [`SKILL.md`](SKILL.md). GitHub is the technical source of truth; the [Notion SOP](https://app.notion.com/p/3c9a3e33d58181e4a4a3e38853273151) is the operational guide.
 
 ## Do Not Use
 
@@ -41,4 +41,3 @@ python3 /path/to/z-ai-skill-developer-Skill/scripts/validate_skill.py dist/z-adv
 ```
 
 The package intentionally contains only `SKILL.md`. Install the tested `dist/z-advanced-asana-control/` directory in the approved OpenClaw skills location, then verify discovery and behavior in a fresh session.
-
