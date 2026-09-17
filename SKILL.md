@@ -5,15 +5,16 @@ description: Govern advanced ZedBiz Asana structure, reporting, permissions, bul
 
 # Z Advanced Asana Control
 
-Use this skill for advanced Asana administration by a ZedBiz agent that has been approved for the requested scope.
+Use this skill for advanced ZedBiz Asana administration through the runtime's approved connection.
 
 Use `z-asana-agent-control` for ordinary assigned-task work. Read-only navigation does not need this skill unless it is part of an advanced review.
 
 ## 1. Confirm Authority And Route
 
-- Select the acting authority using `z-asana-agent-control`. Agent-owned execution requires that agent's PAT-backed MCP. A direct signed-in-user request may use the verified native connector under that user's authority; it must never stand in for another agent's connection.
-- Call the current-user lookup once per session and verify the expected acting account, user GID, and workspace GID.
-- Stop if identity, workspace, tool route, or permission does not match the approved agent configuration.
+- **ChatGPT/Codex:** use the connected Asana plugin. A Jack-authenticated connection is the approved route for work Jack requests in ChatGPT.
+- **OpenClaw team agent:** use that agent's approved PAT-backed Asana MCP. Do not substitute ChatGPT's connection or another agent's identity.
+- Read the connected identity and workspace when the route exposes them. For OpenClaw, require the expected agent email, user GID, and workspace GID. For ChatGPT, verify the requested project/task and intended workspace through the connected plugin.
+- Stop if the applicable identity, workspace, tool route, target, or permission cannot be verified.
 - Resolve project, task, section, field, option, team, portfolio, and user names to exact GIDs. Do not guess between matches.
 - Treat a successful read-only call through the approved route as the connectivity test. A failing legacy probe alone does not prove the route is unavailable.
 
@@ -61,7 +62,7 @@ For a controlled change:
 4. Stop on an unexpected object, permission, field scope, or materially larger impact.
 5. Do not continue after a partial failure until the safe state and next action are known.
 
-Do not use a different credential route, direct REST workaround, or personal connector when the approved MCP route fails.
+Do not switch between ChatGPT and OpenClaw authority, use direct REST, or fall back to browser automation when the approved runtime route fails.
 
 ## 6. Verify And Report
 
