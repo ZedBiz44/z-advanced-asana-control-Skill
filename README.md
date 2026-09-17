@@ -40,4 +40,10 @@ bash scripts/build_package.sh
 python3 /path/to/z-ai-skill-developer-Skill/scripts/validate_skill.py dist/z-advanced-asana-control
 ```
 
-The package intentionally contains only `SKILL.md`. Install the tested `dist/z-advanced-asana-control/` directory in the approved OpenClaw skills location, then verify discovery and behavior in a fresh session.
+The package includes `SKILL.md` and the runtime folders listed in `package-resources.txt`. Install the tested `dist/z-advanced-asana-control/` directory in the approved OpenClaw skills location, then verify discovery and behavior in a fresh session.
+
+## Shared ChatGPT, Cody and agent instructions
+
+Direct user-authorized ChatGPT/Cody work uses the verified connected account. Work owned by an OpenClaw/Hermes agent uses its approved agent connection. The current SKILL.md governs this distinction. No new connection or memory service is installed by this package.
+
+The deployable package includes SKILL.md and every directory listed in package-resources.txt, including agents/openai.yaml. Rebuild it from this source before installing; do not install an old committed dist entry in isolation. Source and generated dist files must match. See the 2026-09-17 follow-up record in z-ai-skill-developer-Skill for Cody verification and separate ChatGPT status.
