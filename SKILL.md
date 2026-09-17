@@ -7,12 +7,12 @@ description: Govern advanced ZedBiz Asana structure, reporting, permissions, bul
 
 Use this skill for advanced Asana administration by a ZedBiz agent that has been approved for the requested scope.
 
-Use `zedbiz-asana-agent-control` for ordinary assigned-task work. Read-only navigation does not need this skill unless it is part of an advanced review.
+Use `z-asana-agent-control` for ordinary assigned-task work. Read-only navigation does not need this skill unless it is part of an advanced review.
 
 ## 1. Confirm Authority And Route
 
-- Use the agent's approved PAT-backed Asana MCP route. Never use Jack's personal connector for agent-owned execution.
-- Call the current-user lookup once per session and verify the expected agent email, user GID, and workspace GID.
+- Select the acting authority using `z-asana-agent-control`. Agent-owned execution requires that agent's PAT-backed MCP. A direct signed-in-user request may use the verified native connector under that user's authority; it must never stand in for another agent's connection.
+- Call the current-user lookup once per session and verify the expected acting account, user GID, and workspace GID.
 - Stop if identity, workspace, tool route, or permission does not match the approved agent configuration.
 - Resolve project, task, section, field, option, team, portfolio, and user names to exact GIDs. Do not guess between matches.
 - Treat a successful read-only call through the approved route as the connectivity test. A failing legacy probe alone does not prove the route is unavailable.

@@ -1,0 +1,4 @@
+interface:
+  default_prompt: "Use $z-advanced-asana-control for the requested ZedBiz workflow."
+  display_name: "Z Advanced Asana Control"
+  short_description: "Help with Z Advanced Asana Control tasks"
