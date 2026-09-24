@@ -1,2 +1,1 @@
-# No additional runtime folders are required.
 agents

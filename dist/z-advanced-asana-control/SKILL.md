@@ -5,16 +5,16 @@ description: Govern advanced ZedBiz Asana structure, reporting, permissions, bul
 
 # Z Advanced Asana Control
 
-Use this skill for advanced ZedBiz Asana administration through the runtime's approved connection.
+Use this skill for authority and safe execution of project setup, structural repair, and advanced ZedBiz Asana administration. For routine project/task construction quality and release order, use `z-asana-procedures`. This skill does not replace its setup instructions.
 
-Use `z-asana-agent-control` for ordinary assigned-task work. Read-only navigation does not need this skill unless it is part of an advanced review.
+Use `z-asana-agent-control` for ordinary assigned-task work and `z-asana-procedures` for routine setup, assignment readiness, checkpoints and review routing. Read-only navigation does not need this skill unless it is part of an advanced review.
 
 ## 1. Confirm Authority And Route
 
 - **ChatGPT/Codex:** use the connected Asana plugin. A Jack-authenticated connection is the approved route for work Jack requests in ChatGPT.
 - **OpenClaw or Hermes agent:** use that agent's approved PAT-backed Asana MCP. Do not substitute ChatGPT's connection or another agent's identity.
-- Read the connected identity and workspace when the route exposes them. For OpenClaw/Hermes, require the expected agent email, user GID, and workspace GID. For ChatGPT, verify the requested project/task and intended workspace through the connected plugin.
-- Select whose authority applies using z-asana-agent-control. Acting for a named agent or processing its queue requires its approved connection even when Jack asks through ChatGPT/Codex; a read-only question about that agent does not itself mean impersonation.
+- Complete the applicable identity/workspace preflight once per new work session and repeat it after reconnect, route/account change or authority uncertainty. Reuse that verification for subsequent actions in the same session. Read the connected identity and workspace when the route exposes them. For OpenClaw/Hermes, require the expected agent email, user GID, and workspace GID. For ChatGPT, verify the requested project/task and intended workspace through the connected plugin.
+- Acting for a named agent or processing its queue requires that agent's approved connection even when Jack asks through ChatGPT/Codex. A read-only question about that agent may use Jack's authorized connector. Verify the acting account and target; record Cody separately as the assistant when using Jack's connection. Do not load the assigned-task execution workflow merely to establish this boundary.
 - Stop if the applicable identity, workspace, tool route, target, or permission cannot be verified.
 - Resolve project, task, section, field, option, team, portfolio, and user names to exact GIDs. Do not guess between matches.
 - Treat a successful read-only call through the approved route as the connectivity test. A failing legacy probe alone does not prove the route is unavailable.
@@ -44,7 +44,7 @@ Do not infer that a missing search result proves an object does not exist or tha
 ## 4. Plan The Change
 
 - Preserve existing structure unless redesign is part of the authorized outcome.
-- For sections or task ordering, record current placement and use exact section and neighbor GIDs.
+- For sections or task ordering, record current placement and use exact section and neighbor GIDs. Follow Procedures for unnumbered action titles, native dividers, and working order; dates and dependencies are not display-order controls.
 - For fields, inspect the field type, scope, enum option GIDs, and reporting use before editing.
 - Add dependencies only for real blocking relationships. Remove them only when resolved or authorized.
 - For dates, preserve task duration and dependency logic when required by the request.
@@ -61,7 +61,7 @@ For a controlled change:
 2. Present the preview and receive confirmation.
 3. Apply changes in small verifiable groups.
 4. Stop on an unexpected object, permission, field scope, or materially larger impact.
-5. Do not continue after a partial failure until the safe state and next action are known.
+5. Stop the affected change set after a partial failure until its safe state and next action are known. Do not automatically stop unrelated authorized work. Identity/permission uncertainty stops every action through the affected route; systemic unsafe behavior stops that class of changes.
 
 Do not switch between ChatGPT and OpenClaw authority, use direct REST, or fall back to browser automation when the approved runtime route fails.
 

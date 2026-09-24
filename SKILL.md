@@ -5,7 +5,7 @@ description: Govern advanced ZedBiz Asana structure, reporting, permissions, bul
 
 # Z Advanced Asana Control
 
-Use this skill for advanced ZedBiz Asana administration through the runtime's approved connection.
+Use this skill for authority and safe execution of project setup, structural repair, and advanced ZedBiz Asana administration. For routine project/task construction quality and release order, use `z-asana-procedures`. This skill does not replace its setup instructions.
 
 Use `z-asana-agent-control` for ordinary assigned-task work and `z-asana-procedures` for routine setup, assignment readiness, checkpoints and review routing. Read-only navigation does not need this skill unless it is part of an advanced review.
 
@@ -14,7 +14,7 @@ Use `z-asana-agent-control` for ordinary assigned-task work and `z-asana-procedu
 - **ChatGPT/Codex:** use the connected Asana plugin. A Jack-authenticated connection is the approved route for work Jack requests in ChatGPT.
 - **OpenClaw or Hermes agent:** use that agent's approved PAT-backed Asana MCP. Do not substitute ChatGPT's connection or another agent's identity.
 - Complete the applicable identity/workspace preflight once per new work session and repeat it after reconnect, route/account change or authority uncertainty. Reuse that verification for subsequent actions in the same session. Read the connected identity and workspace when the route exposes them. For OpenClaw/Hermes, require the expected agent email, user GID, and workspace GID. For ChatGPT, verify the requested project/task and intended workspace through the connected plugin.
-- Select whose authority applies using z-asana-agent-control. Acting for a named agent or processing its queue requires its approved connection even when Jack asks through ChatGPT/Codex; a read-only question about that agent does not itself mean impersonation.
+- Acting for a named agent or processing its queue requires that agent's approved connection even when Jack asks through ChatGPT/Codex. A read-only question about that agent may use Jack's authorized connector. Verify the acting account and target; record Cody separately as the assistant when using Jack's connection. Do not load the assigned-task execution workflow merely to establish this boundary.
 - Stop if the applicable identity, workspace, tool route, target, or permission cannot be verified.
 - Resolve project, task, section, field, option, team, portfolio, and user names to exact GIDs. Do not guess between matches.
 - Treat a successful read-only call through the approved route as the connectivity test. A failing legacy probe alone does not prove the route is unavailable.
@@ -44,7 +44,7 @@ Do not infer that a missing search result proves an object does not exist or tha
 ## 4. Plan The Change
 
 - Preserve existing structure unless redesign is part of the authorized outcome.
-- For sections or task ordering, record current placement and use exact section and neighbor GIDs.
+- For sections or task ordering, record current placement and use exact section and neighbor GIDs. Follow Procedures for unnumbered action titles, native dividers, and working order; dates and dependencies are not display-order controls.
 - For fields, inspect the field type, scope, enum option GIDs, and reporting use before editing.
 - Add dependencies only for real blocking relationships. Remove them only when resolved or authorized.
 - For dates, preserve task duration and dependency logic when required by the request.
