@@ -7,7 +7,7 @@ description: Govern advanced ZedBiz Asana structure, reporting, permissions, bul
 
 Use this skill for authority and safe execution of project setup, structural repair, and advanced ZedBiz Asana administration. For routine project/task construction quality and release order, use `z-asana-procedures`. This skill does not replace its setup instructions.
 
-Use `z-asana-agent-control` for ordinary assigned-task work and `z-asana-procedures` for routine setup, assignment readiness, checkpoints and review routing. Read-only navigation does not need this skill unless it is part of an advanced review.
+Use `z-asana-agent-control` for doing assigned work through completion, including subtasks, review, and progress recovery. Use `z-asana-procedures` when creating or repairing a task, subtask, or project. Creating a small authorized follow-up within an assignment uses Agent Control for permission and Procedures for setup; it does not by itself require this advanced skill. Read-only navigation does not need this skill unless it is part of an advanced review.
 
 ## 1. Confirm Authority And Route
 
