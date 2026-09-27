@@ -19,6 +19,8 @@ Use `z-asana-agent-control` for doing assigned work through completion, includin
 - Resolve project, task, section, field, option, team, portfolio, and user names to exact GIDs. Do not guess between matches.
 - Treat a successful read-only call through the approved route as the connectivity test. A failing legacy probe alone does not prove the route is unavailable.
 
+Routine planning of an owned main assignment belongs to Agent Control: the owner may self-assign their own unassigned subtasks and date those steps within the agreed scope and schedule. This does not permit taking another person's work, moving shared commitments, or changing project structure. Procedures owns preparing and checking work, then assigning the main task first. Do not interpret intentionally unassigned owner-managed steps as incomplete project setup.
+
 ## 2. Classify The Requested Change
 
 Choose the smallest class that fits the full blast radius.
